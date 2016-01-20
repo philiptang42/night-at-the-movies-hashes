@@ -8,10 +8,10 @@ choice = gets.chomp
 case choice
   when "add"
     puts "Input a movie title"
-    title = gets.chomp
+      title = gets.chomp.to_sym
     puts "Input its rating"
-    rating = gets.chomp
-    movies["#{title}"] = "#{rating}"
+      rating = gets.chomp.to_i
+    movies[title] = rating
   when "update"
     puts "Updated!"
   when "display"
