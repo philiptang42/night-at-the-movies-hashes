@@ -20,18 +20,25 @@ case choice
     puts "Input a movie title"
     title = gets.chomp.to_sym
       if movies[title].nil?
+        puts "Movie does not currently exist"
+      else
         puts "Input a new rating"
         rating = gets.chomp.to_i
         movies[title] = rating
-      else
-        puts "Movie does not currently exist"
       end
   when "display"
     movies.each do |movie, rating|
       puts "#{movie}: #{rating}"
     end
   when "delete"
-    puts "Deleted!"
+    puts "Input movie title to delete"
+    title = gets.chomp.to_sym
+      if movies[title].nil?
+        puts "Movie does not currently exist"
+      else
+        movies.delete(title)
+        puts "#{title} deleted"
+      end
   else
     puts "Error!"
 end
