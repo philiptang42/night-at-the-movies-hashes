@@ -27,7 +27,9 @@ case choice
         puts "Movie does not currently exist"
       end
   when "display"
-    puts "Movies!"
+    movies.each do |movie, rating|
+      puts "#{movie}: #{rating}"
+    end
   when "delete"
     puts "Deleted!"
   else
