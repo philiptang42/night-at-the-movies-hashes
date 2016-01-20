@@ -17,7 +17,15 @@ case choice
       puts "That movie is already in the list"
     end
   when "update"
-    puts "Updated!"
+    puts "Input a movie title"
+    title = gets.chomp.to_sym
+      if movies[title].nil?
+        puts "Input a new rating"
+        rating = gets.chomp.to_i
+        movies[title] = rating
+      else
+        puts "Movie does not currently exist"
+      end
   when "display"
     puts "Movies!"
   when "delete"
