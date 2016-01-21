@@ -1,5 +1,8 @@
 movies = {
-  star_wars_vii: 4
+  star_wars_vii: 4,
+  avengers: 3,
+  batmang: 5,
+  revenant: 2
 }
 
 puts "Input add, update, display or delete"
